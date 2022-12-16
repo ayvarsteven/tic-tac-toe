@@ -27,9 +27,24 @@ header {
 }
 
 #board-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+
   width: 450px;
   height: 450px;
   background-color: white;
+  border: 2px solid #fafafa;
+}
+
+.cell {
+  border: 2px solid #fafafa;
+}
+
+.cell:hover {
+  background-color: #eaeaea;
+  border: 2px solid #eaeaea;
 }
 
 #restart-btn {
