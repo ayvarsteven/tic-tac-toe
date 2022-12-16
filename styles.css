@@ -1,0 +1,15 @@
+:root {
+}
+
+body {
+  font-family: 'Helvetica';
+}
+
+header {
+  display: grid;
+  place-items: center;
+
+  width: 100vw;
+  height: 120px;
+  background-color: lightseagreen;
+}
