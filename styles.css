@@ -19,6 +19,13 @@ header {
   font-size: 2rem;
 }
 
+#main-container {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
 #gameboard {
   width: 450px;
   height: 450px;
