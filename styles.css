@@ -15,6 +15,16 @@ header {
   background-color: var(--primary);
 }
 
+.turn-display {
+  font-size: 2rem;
+}
+
+#gameboard {
+  width: 450px;
+  height: 450px;
+  background-color: white;
+}
+
 #restart-btn {
   padding: 0.5rem 2rem;
 
@@ -22,10 +32,6 @@ header {
   background-color: var(--primary);
 
   cursor: pointer;
-}
-
-.turn-display {
-  font-size: 2rem;
 }
 
 #restart-btn:hover {
