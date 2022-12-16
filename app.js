@@ -9,6 +9,10 @@ const ticTacToe = (() => {
     return obj;
   }
 
+  const BoardDisplay = (() => {
+    console.log(`Hello!`);
+    const gameboard = [0, 1, 0, 1, 0, 1, 0, 1, 0];
+  })();
 
   const getDomElements = (() => {
     const mainContainer = document.getElementById('main-container');
