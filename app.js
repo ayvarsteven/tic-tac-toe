@@ -1,8 +1,14 @@
 const ticTacToe = (() => {
-  const gameboard = [];
   const player1 = {};
   const player2 = {};
   const game = {};
+
+  function CreatePlayer(name) {
+    const obj = Object.create(this);
+    obj.name = name;
+    return obj;
+  }
+
 
   const getDomElements = (() => {
     const mainContainer = document.getElementById('main-container');
@@ -17,6 +23,8 @@ const ticTacToe = (() => {
     console.log(getDomElements.turnDisplay);
     // if player turn === true, getDomElements.turnDisplay.textContent = 'Player X's Turn'
   })();
+
+  return { CreatePlayer };
 })();
 
 // ==============================================================================
