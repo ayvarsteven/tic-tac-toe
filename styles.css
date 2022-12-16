@@ -1,4 +1,5 @@
 :root {
+  --primary: lightseagreen;
 }
 
 body {
@@ -11,5 +12,22 @@ header {
 
   width: 100vw;
   height: 120px;
-  background-color: lightseagreen;
+  background-color: var(--primary);
+}
+
+#restart-btn {
+  padding: 0.5rem 2rem;
+
+  border: none;
+  background-color: var(--primary);
+
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  background-color: rgb(30, 151, 145);
+}
+
+#restart-btn:active {
+  background-color: white;
 }
