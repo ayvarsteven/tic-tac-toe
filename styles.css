@@ -40,6 +40,8 @@ header {
 
 .cell {
   border: 2px solid #fafafa;
+  display: grid;
+  place-items: center;
 }
 
 .cell:hover {
@@ -51,8 +53,8 @@ header {
   background-image: url(/_images/xmark-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 #restart-btn {
