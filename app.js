@@ -22,6 +22,11 @@ const ticTacToe = (() => {
   const BoardDisplay = (() => {
     const gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     const cellArr = Array.from(getDomElements.cells);
+    const playerSelection = (value) => {
+      console.log(
+        `The player has selected this square and i should draw an x over it my value is ${value}`
+      );
+    };
     for (let i = 0; i < cellArr.length; i++) {
       cellArr[i].addEventListener('click', () => {
         const divValue = i;
