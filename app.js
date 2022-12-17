@@ -9,22 +9,27 @@ const ticTacToe = (() => {
     return obj;
   }
 
-  const BoardDisplay = (() => {
-    console.log(`Hello!`);
-    const gameboard = [0, 1, 0, 1, 0, 1, 0, 1, 0];
-  })();
-
   const getDomElements = (() => {
     const mainContainer = document.getElementById('main-container');
     const turnDisplay = document.getElementById('turn-display');
     const boardContainer = document.getElementById('board-container');
+    const cells = boardContainer.children;
     const restartBtn = document.getElementById('restart-btn');
 
-    return { mainContainer, turnDisplay, boardContainer, restartBtn };
+    return { mainContainer, turnDisplay, boardContainer, restartBtn, cells };
+  })();
+
+  const BoardDisplay = (() => {
+    const gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const cellArr = Array.from(getDomElements.cells);
+    for (let i = 0; i < cellArr.length; i++) {
+      cellArr[i].addEventListener('click', () => {
+        const divValue = i;
+      });
+    }
   })();
 
   const turnDisplayController = (() => {
-    console.log(getDomElements.turnDisplay);
     // if player turn === true, getDomElements.turnDisplay.textContent = 'Player X's Turn'
   })();
 
