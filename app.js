@@ -21,22 +21,39 @@ const ticTacToe = (() => {
 
   const BoardDisplay = (() => {
     const gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const numberOfturns = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
     const cellArr = Array.from(getDomElements.cells);
+    const playerTurn = getDomElements.turnDisplay;
 
-    const playerSelection = (value) => {
+    function popArray() {
+      const value = numberOfturns.pop();
+      return value;
+    }
+
+    const createSvgPlayerX = (value) => {
       const playerIcon = document.createElement('div');
       playerIcon.classList.add('icon-test');
       value.appendChild(playerIcon);
       // call turn display controller for next player turn
     };
 
+    const _turnDisplayController = (turn) => {
+      if (turn === 1) {
+        return (playerTurn.textContent = `Player X's Turn`);
+      }
+      if (turn === 2) {
+        return (playerTurn.textContent = `Player O's Turn`);
+      }
+    };
+
     for (let i = 0; i < cellArr.length; i++) {
       cellArr[i].addEventListener('click', () => {
+        const testValue = popArray();
+        console.log(testValue);
+        _turnDisplayController(testValue);
         const divValue = i;
-        const playerValue = 1;
-        const computerValue = 2;
         gameboard[i] = divValue;
-        playerSelection(cellArr[i]);
+        createSvgPlayerX(cellArr[i]);
       });
     }
     return gameboard;
