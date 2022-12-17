@@ -65,40 +65,5 @@ const ticTacToe = (() => {
     return gameboard;
   })();
 
-  const turnDisplayController = (() => {
-    // if player turn === true, getDomElements.turnDisplay.textContent = 'Player X's Turn'
-  })();
-
-  return { CreatePlayer, BoardDisplay, getDomElements };
+  return { BoardDisplay };
 })();
-
-// ==============================================================================
-// General Logic
-// ==============================================================================
-//
-// user click (create corresponding array value for each div)
-// user click middle (arra[4] === 0 or 1)
-// calls function to update the value of the array
-
-// turn display controller is called and updates the value to player X turn or player O turn
-// create logic for turn display controller
-
-// ==============================================================================
-// Program Structure
-// ==============================================================================
-// 02 Create Player
-// factory  function
-// 03.A Board Display
-// 03.B Display Controller
-// 04. Board Controller
-// 05 Build Logic for Game
-// 06 Build Interface
-
-// ==============================================================================
-// Practice Concepts
-// ==============================================================================
-//  - Data Encapsulation
-//  - Abstraction
-//  - Modularity
-//
-// first write out the logic in comments then write modular functions to create the links between them then individually write out the logic for each block. Test that the block works first then once it returns what you expect, git commit.
