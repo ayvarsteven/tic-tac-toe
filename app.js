@@ -22,23 +22,23 @@ const ticTacToe = (() => {
   const BoardDisplay = (() => {
     const gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     const cellArr = Array.from(getDomElements.cells);
+
     const playerSelection = (value) => {
-      console.log(
-        `The player has selected this square and i should draw an x over it my value is ${value}`
-      );
+      const playerIcon = document.createElement('div');
+      playerIcon.classList.add('icon-test');
+      value.appendChild(playerIcon);
+      // call turn display controller for next player turn
     };
+
     for (let i = 0; i < cellArr.length; i++) {
       cellArr[i].addEventListener('click', () => {
         const divValue = i;
         const playerValue = 1;
         const computerValue = 2;
         gameboard[i] = divValue;
-        console.log(gameboard);
-        playerSelection(divValue);
-        // return (gameboard[i] = divValue);
+        playerSelection(cellArr[i]);
       });
     }
-    // display value function
     return gameboard;
   })();
 
@@ -46,7 +46,7 @@ const ticTacToe = (() => {
     // if player turn === true, getDomElements.turnDisplay.textContent = 'Player X's Turn'
   })();
 
-  return { CreatePlayer, BoardDisplay };
+  return { CreatePlayer, BoardDisplay, getDomElements };
 })();
 
 // ==============================================================================

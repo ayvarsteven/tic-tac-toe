@@ -47,6 +47,14 @@ header {
   border: 2px solid #eaeaea;
 }
 
+.icon-test {
+  background-image: url(/_images/xmark-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+}
+
 #restart-btn {
   padding: 0.5rem 2rem;
 
