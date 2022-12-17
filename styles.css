@@ -49,8 +49,16 @@ header {
   border: 2px solid #eaeaea;
 }
 
-.icon-test {
+.icon-player-x {
   background-image: url(/_images/xmark-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.icon-player-o {
+  background-image: url(/_images/o-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100px;
