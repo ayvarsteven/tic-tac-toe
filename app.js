@@ -42,12 +42,16 @@ const ticTacToe = (() => {
       value.appendChild(playerIcon);
     };
 
-    const _turnDisplayController = (turn, cellValue) => {
+    const _turnDisplayController = (turn, cellValue, arrayPosition) => {
       if (turn === 1) {
+        const playerOChoice = 1;
+        gameboard[arrayPosition] = playerOChoice;
         createSvgPlayerO(cellValue);
         return (playerTurn.textContent = `Player X's Turn`);
       }
       if (turn === 2) {
+        const playerXChoice = 2;
+        gameboard[arrayPosition] = playerXChoice;
         createSvgPlayerX(cellValue);
         return (playerTurn.textContent = `Player O's Turn`);
       }
@@ -56,10 +60,9 @@ const ticTacToe = (() => {
     for (let i = 0; i < cellArr.length; i++) {
       cellArr[i].addEventListener('click', () => {
         const testValue = popArray();
-        _turnDisplayController(testValue, cellArr[i]);
         const divValue = i;
         gameboard[i] = divValue;
-        console.log(gameboard);
+        _turnDisplayController(testValue, cellArr[i], gameboard[i]);
       });
     }
     return gameboard;
