@@ -25,15 +25,23 @@ const ticTacToe = (() => {
     for (let i = 0; i < cellArr.length; i++) {
       cellArr[i].addEventListener('click', () => {
         const divValue = i;
+        const playerValue = 1;
+        const computerValue = 2;
+        gameboard[i] = divValue;
+        console.log(gameboard);
+        playerSelection(divValue);
+        // return (gameboard[i] = divValue);
       });
     }
+    // display value function
+    return gameboard;
   })();
 
   const turnDisplayController = (() => {
     // if player turn === true, getDomElements.turnDisplay.textContent = 'Player X's Turn'
   })();
 
-  return { CreatePlayer };
+  return { CreatePlayer, BoardDisplay };
 })();
 
 // ==============================================================================
